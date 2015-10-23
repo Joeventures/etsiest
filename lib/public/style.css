@@ -1,0 +1,16 @@
+* {
+    color: black;
+}
+
+table {
+    border: solid black 2px;
+}
+
+td {
+    border: dashed grey 1px;
+}
+
+.thumb-img {
+    width: 225px;
+    height: 179px;
+}

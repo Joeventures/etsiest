@@ -2,8 +2,27 @@
 <html>
 <header>
   <title>Etsyish</title>
+  <link rel="stylesheet" href="style.css" type="text/css" media="all">
 </header>
 <body>
-<p>Welcome to Etsyish</p>
+  <% results.each do |result| %>
+    <div class="listing">
+      <div class="thumb-div">
+        <img class="thumb-img" src="<%= result['Images'][0]['url_170x135'] %>">
+      </div>
+      <div class="item-title">
+        <%= result['title'] %>
+      </div>
+      <div class="shop">
+        <%= result['Shop']['shop_name'] %>
+      </div>
+      <div class="price">
+        <%= result['price'] %>
+      </div>
+      <div class="currency">
+        <%= result['currency_code'] %>
+      </div>
+    </div>
+ <% end %>
 </body>
 </html>

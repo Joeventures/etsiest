@@ -1,8 +1,8 @@
 module Etsiest
   class EtsySearch
     def find_listings( search_term )
-      response = Etsy::Listing.find_all_active_by_category(search_term, :includes => ['Images', 'Shop'])
-      response.map {|r| r.result }
+      response = Etsy::Request.get('/listings/active', :includes => ['Images', 'Shop'], :keywords => 'whiskey')
+      response.result
     end
   end
 end
