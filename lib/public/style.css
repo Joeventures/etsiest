@@ -10,7 +10,32 @@ td {
     border: dashed grey 1px;
 }
 
-.thumb-img {
+.listing, .thumb-img, .item-title {
     width: 225px;
+}
+
+.listing {
+    display: inline-block;
+}
+
+.thumb-img {
     height: 179px;
+}
+
+.item-title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.shop {
+    font-size: 12px;
+    display: inline-block;
+    float: left;
+}
+
+.price {
+    font-size: 12px;
+    display: inline-block;
+    float: right;
 }
