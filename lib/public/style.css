@@ -30,6 +30,8 @@
 
 .thumb-img {
     height: 179px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
 }
 
 .item-title {
