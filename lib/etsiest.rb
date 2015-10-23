@@ -1,5 +1,12 @@
 require "etsiest/version"
+require "pry"
+require "etsiest/etsysearch"
+
+require 'etsy'
+Etsy.api_key = ENV['ETSY_KEY']
 
 module Etsiest
-  # Your code goes here...
+  class App
+    binding.pry
+  end
 end
