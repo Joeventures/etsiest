@@ -47,6 +47,58 @@ body {
     padding: 0 0 6px 12px;
 }
 
+input[type=radio] {
+    display: none;
+}
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    font-size: 13px;
+    width: 100%;
+    color: #0192b5;
+}
+
+.input-set {
+    border-bottom: solid #e1e3df 1px;
+}
+
+label:hover {
+    text-decoration: underline;
+}
+
+label:before {
+    content: "";
+    display: inline-block;
+
+    width: 20px;
+    height: 20px;
+
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: #ffffff;
+    /*box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);*/
+    border-radius: 12px;
+    border: 1px solid #cbccc9;
+}
+
+input[type=radio]:checked + label:before {
+    content: "\2022";
+    color: #2ba8c6;
+    font-size: 40px;
+    text-align: center;
+    line-height: 21px;
+}
+
+input:checked + label {
+    font-weight: bold;
+    color: #464646;
+}
+
 .listing, .thumb-img {
     width: 225px;
 }
