@@ -4,12 +4,22 @@
     line-height: 1.4;
 }
 
+body {
+    background-color: #f5f5f1;
+}
+
+.left-column {
+    float: left;
+    width: 25%;
+}
+
 .listing, .thumb-img {
     width: 225px;
 }
 
 .listings {
     width: 75%;
+    float: left;
 }
 
 .listing {
@@ -20,6 +30,7 @@
     border-style: solid;
     border-radius: 3px;
     padding-bottom: 3px;
+    background-color: #ffffff;
 }
 
 .listing-meta {
@@ -40,6 +51,7 @@
     text-overflow: ellipsis;
     color: #555555;
     font-size: 12px;
+    margin-bottom: 6px;
 }
 
 .shop {
