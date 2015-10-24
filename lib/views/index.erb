@@ -5,28 +5,50 @@
   <link rel="stylesheet" href="style.css" type="text/css" media="all">
 </header>
 <body>
-<div class="left-column">
-  <p>Some Text</p>
-</div>
-<div class="listings">
-  <% results.each do |result| %>
-    <div class="listing">
-      <div class="thumb-div">
-        <img class="thumb-img" src="<%= result['Images'][0]['url_170x135'] %>">
-      </div>
-      <div class="listing-meta">
-      <div class="item-title">
-        <%= result['title'] %>
-      </div>
-      <div class="shop">
-        <%= result['Shop']['shop_name'] %>
-      </div>
-      <div class="price">
-        <%= result['price'] %>  <%= result['currency_code'] %>
-      </div>
-      </div>
+<div class="wrapper">
+  <div class="left-column">
+    <p class="widget-title">Show results for:</p>
+    <div class="widget">
+      <strong>All Categories</strong>
+      <ul>
+        <li><a href="#">Home & Living</a></li>
+        <li><a href="#">Art & Collectibles</a></li>
+        <li><a href="#">Weddings</a></li>
+        <li><a href="#">Clothing</a></li>
+        <li><a href="#">Paper & Party Supplies</a></li>
+        <li><a href="#">Jewelry</a></li>
+        <li><a href="#">Accessories</a></li>
+        <li><a href="#">Craft Supplies & Tools</a></li>
+        <li><a href="#">Bags & Purses</a></li>
+        <li><a href="#">Bath & Beauty</a></li>
+        <li><a href="#">Shoes</a></li>
+        <li><a href="#">Books, Movies & Music</a></li>
+        <li><a href="#">Electronics & Accessories</a></li>
+        <li><a href="#">Toys & Games</a></li>
+        <li><a href="#">Pet Supplies</a></li>
+      </ul>
     </div>
- <% end %>
+  </div>
+  <div class="listings">
+    <% results.each do |result| %>
+        <div class="listing">
+          <div class="thumb-div">
+            <img class="thumb-img" src="<%= result['Images'][0]['url_170x135'] %>">
+          </div>
+          <div class="listing-meta">
+            <div class="item-title">
+              <%= result['title'] %>
+            </div>
+            <div class="shop">
+              <%= result['Shop']['shop_name'] %>
+            </div>
+            <div class="price">
+              <%= result['price'] %>  <%= result['currency_code'] %>
+            </div>
+          </div>
+        </div>
+    <% end %>
+  </div>
 </div>
 </body>
 </html>
