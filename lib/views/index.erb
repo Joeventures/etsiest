@@ -1,51 +1,78 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
-<header>
+<head>
   <title>Etsyish</title>
   <link rel="stylesheet" href="style.css" type="text/css" media="all">
-</header>
+</head>
 <body>
 <div class="wrapper">
-  <div class="left-column">
-    <p class="widget-title">Show results for:</p>
-
-    <div class="widget">
-      <strong>All Categories</strong>
+  <div class="top-bar">
+    <div class="top-bar-top">
+      <div class="left-top">
+        <p>Test</p>
+      </div>
+      <div class="right-top">
+        <p>Test</p>
+      </div>
+    </div>
+    <div class="top-menu">
       <ul>
-        <li><a href="#">Home & Living</a></li>
-        <li><a href="#">Art & Collectibles</a></li>
-        <li><a href="#">Weddings</a></li>
-        <li><a href="#">Clothing</a></li>
-        <li><a href="#">Paper & Party Supplies</a></li>
+        <li><a href="#">Clothing & Accessories</a></li>
         <li><a href="#">Jewelry</a></li>
-        <li><a href="#">Accessories</a></li>
         <li><a href="#">Craft Supplies & Tools</a></li>
-        <li><a href="#">Bags & Purses</a></li>
-        <li><a href="#">Bath & Beauty</a></li>
-        <li><a href="#">Shoes</a></li>
-        <li><a href="#">Books, Movies & Music</a></li>
-        <li><a href="#">Electronics & Accessories</a></li>
-        <li><a href="#">Toys & Games</a></li>
-        <li><a href="#">Pet Supplies</a></li>
+        <li><a href="#">Weddings</a></li>
+        <li><a href="#">Entertainment</a></li>
+        <li><a href="#">Home & Living</a></li>
+        <li><a href="#">Kids & Baby</a></li>
+        <li><a href="#">Vintage</a></li>
       </ul>
     </div>
-
-    <p class="widget-title">Refine Your Search</p>
-
-    <div class="widget">
-      <form action="#">
-        <div class="input-set">
-          <p><strong>Item Type</strong></p>
-          <input type="radio" name="item-type" value="All Items" id="all-items">
-          <label for="all-items">All Items</label>
-          <input type="radio" name="item-type" value="Handmade" id="handmade"> <label for="handmade">Handmade</label>
-          <input type="radio" name="item-type" value="Vintage" id="vintage"> <label for="vintage">Vintage</label>
-        </div>
-      </form>
-    </div>
   </div>
-  <div class="listings">
-    <% results.each do |result| %>
+
+
+  <div class="main-body">
+
+
+    <div class="left-column">
+      <p class="widget-title">Show results for:</p>
+
+      <div class="widget">
+        <strong>All Categories</strong>
+        <ul>
+          <li><a href="#">Home & Living</a></li>
+          <li><a href="#">Art & Collectibles</a></li>
+          <li><a href="#">Weddings</a></li>
+          <li><a href="#">Clothing</a></li>
+          <li><a href="#">Paper & Party Supplies</a></li>
+          <li><a href="#">Jewelry</a></li>
+          <li><a href="#">Accessories</a></li>
+          <li><a href="#">Craft Supplies & Tools</a></li>
+          <li><a href="#">Bags & Purses</a></li>
+          <li><a href="#">Bath & Beauty</a></li>
+          <li><a href="#">Shoes</a></li>
+          <li><a href="#">Books, Movies & Music</a></li>
+          <li><a href="#">Electronics & Accessories</a></li>
+          <li><a href="#">Toys & Games</a></li>
+          <li><a href="#">Pet Supplies</a></li>
+        </ul>
+      </div>
+
+      <p class="widget-title">Refine Your Search</p>
+
+      <div class="widget">
+        <form action="#">
+          <div class="input-set">
+            <p><strong>Item Type</strong></p>
+            <input type="radio" name="item-type" value="All Items" id="all-items">
+            <label for="all-items">All Items</label>
+            <input type="radio" name="item-type" value="Handmade" id="handmade"> <label for="handmade">Handmade</label>
+            <input type="radio" name="item-type" value="Vintage" id="vintage"> <label for="vintage">Vintage</label>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="listings">
+      <% results.each do |result| %>
         <div class="listing">
           <div class="thumb-div">
             <img class="thumb-img" src="<%= result['Images'][0]['url_170x135'] %>">
@@ -62,7 +89,8 @@
             </div>
           </div>
         </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 </body>
