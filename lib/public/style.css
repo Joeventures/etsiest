@@ -24,11 +24,17 @@ body {
     height: 90px;
     display: table;
     margin: 0 auto;
+    width: 1064px;
 }
 
 .left-top {
     float: left;
+}
 
+.left-top img {
+    width: 72px;
+    margin-top: 30px;
+    padding-left: 65px;
 }
 .right-top {
     float: right;
@@ -54,6 +60,10 @@ body {
     display: inline-block;
     padding: 5px;
     margin-right: 7px;
+}
+
+.top-menu {
+    border-top: solid 1px #e1e3df;
 }
 
 .top-menu a {
